@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.coach.Coach_LiveCourse_Controller">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@icon/bg004.jpeg" />
+            </image>
+        </ImageView>
+        <Pane fx:id="livingPage_pane" layoutX="6.0" layoutY="47.0" prefHeight="546.0" prefWidth="788.0">
+            <children>
+                <Button layoutX="38.0" layoutY="458.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" text="RECORD ON" />
+                <Button layoutX="502.0" layoutY="419.0" mnemonicParsing="false" text="CAMERA ON" />
+                <Button layoutX="657.0" layoutY="419.0" mnemonicParsing="false" text="CAMERA OFF" />
+                <Button layoutX="502.0" layoutY="471.0" mnemonicParsing="false" text="MICROPHONE ON" />
+                <Button layoutX="650.0" layoutY="471.0" mnemonicParsing="false" text="MICROPHONE OFF" />
+                <Button layoutX="36.0" layoutY="411.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="95.0" text="LIVE START" />
+                <Slider layoutX="290.0" layoutY="477.0" prefHeight="17.0" prefWidth="115.0" />
+                <Slider layoutX="290.0" layoutY="425.0" prefHeight="17.0" prefWidth="115.0" />
+                <Label layoutX="185.0" layoutY="424.0" text="VOLUME">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+                <Label layoutX="174.0" layoutY="475.0" text="MICROPHONE">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+                <Pane layoutX="29.0" layoutY="25.0" prefHeight="364.0" prefWidth="557.0" style="-fx-border-color: red;" />
+            <Button layoutX="36.0" layoutY="505.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="90.0" text="LIVE END" />
+            <Label layoutX="593.0" text="SCHEDULED TIME" textFill="#1c9e86">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="timeLive" layoutX="593.0" layoutY="33.0" prefHeight="17.0" prefWidth="195.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="593.0" layoutY="65.0" text="MEMBER NAME" textFill="#13bfa8">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label fx:id="memberName" layoutX="594.0" layoutY="97.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="feedback" layoutX="599.0" layoutY="170.0" prefHeight="186.0" prefWidth="160.0" />
+            <Label layoutX="599.0" layoutY="141.0" text="FEEDBACK" />
+            <Button layoutX="705.0" layoutY="362.0" mnemonicParsing="false" text="SEND" />
+            </children>
+        </Pane>
+      <Label layoutX="278.0" layoutY="17.0" text="LIVE COURSE PAGE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

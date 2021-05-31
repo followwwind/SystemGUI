@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="420.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_Invite_Controller">
+    <children>
+        <ImageView fitHeight="600.0" fitWidth="401.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@icon/3.jpg" />
+            </image>
+        </ImageView>
+        <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="401.0">
+            <children>
+                <Button fx:id="verifyButton" layoutX="288.0" layoutY="414.0" mnemonicParsing="false" onAction="#verify" prefHeight="37.0" prefWidth="76.0" text="VERIFY" />
+                <Label layoutX="144.0" layoutY="31.0" text="INVITATION" textFill="#e4dfdf">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Label>
+            <Label layoutX="22.0" layoutY="306.0" text="INVITATION CODE" textFill="#f8f7f7">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="invitation" layoutX="180.0" layoutY="304.0" prefHeight="27.0" prefWidth="184.0" />
+            <TextArea blendMode="MULTIPLY" layoutX="36.0" layoutY="69.0" prefHeight="213.0" prefWidth="330.0" text="Members can invite others, if you are invited, please fill in the invitation code you received in the text box below, you and the inviter will receive a balance bonus 50$. You can also send your invitation code to others and invite them to sign up for the software to receive rewards. After others sign up, the rewards will be automatically entered into your account." wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+            <Label layoutX="21.0" layoutY="362.0" text="MY INVITATION CODE" textFill="#f5f3f3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="INVITECODE" layoutX="201.0" layoutY="363.0" textFill="#f2eeee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            </children>
+         <effect>
+            <Blend>
+               <topInput>
+                  <ImageInput />
+               </topInput>
+            </Blend>
+         </effect>
+        </Pane>
+    </children>
+</AnchorPane>

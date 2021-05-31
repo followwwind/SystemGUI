@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_OrderSearch_Controller">
+    <children>
+        <ImageView fitHeight="492.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@icon/back2.jpg" />
+            </image>
+        </ImageView>
+        <Pane prefHeight="450.0" prefWidth="800.0">
+            <children>
+                <TableView fx:id="table" layoutX="50.0" layoutY="50.0" prefHeight="356.0" prefWidth="703.0">
+                    <columns>
+                        <TableColumn fx:id="orderid" prefWidth="88.13064193725586" text="order id" />
+                        <TableColumn fx:id="username" prefWidth="89.62033081054688" text="user name" />
+                        <TableColumn fx:id="coachid" minWidth="6.5873870849609375" prefWidth="69.14859008789062" text="coach id" />
+                        <TableColumn fx:id="courseid" minWidth="7.85150146484375" prefWidth="72.46905517578125" text="course id" />
+                        <TableColumn fx:id="date" prefWidth="136.81015014648438" text="date" />
+                        <TableColumn fx:id="sequence" prefWidth="118.18984985351562" text="sequence" />
+                        <TableColumn fx:id="price" prefWidth="56.646514892578125" text="price" />
+                        <TableColumn fx:id="status" prefWidth="69.5335693359375" text="status" />
+                    </columns>
+                </TableView>
+                <Button fx:id="cancel_btn" layoutX="658.0" layoutY="431.0" mnemonicParsing="false" onAction="#cancel_action" prefHeight="35.0" prefWidth="95.0" text="DELETE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            <Label layoutX="265.0" layoutY="14.0" text="ORDER MANAGEMENT">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="428.0" text="select the order you want to delete and your live course will be cancled and you will get refund" textFill="#1f12d0" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

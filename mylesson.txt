@@ -1,0 +1,4 @@
+0910,1,reduce fat for the whole body,suitable for girls,lose weight,20min,http://baidu.com,1
+091019,2,posture improvement,requires high flexibility,lose weight,30min,http://google.com,2
+m1,2,posture improvement,requires high flexibility,lose weight,30min,http://google.com,2
+m1,P0j831,yoga,good for girls,yoga,10min,http://google.com,1

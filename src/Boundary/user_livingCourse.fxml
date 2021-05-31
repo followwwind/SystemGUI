@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="487.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_LivingCourse_Controller">
+   <children>
+      <TableView fx:id="coachInfo" layoutX="81.0" layoutY="116.0" prefHeight="295.0" prefWidth="559.0">
+        <columns>
+          <TableColumn fx:id="coachName" prefWidth="278.40000915527344" text="Coach Name" />
+          <TableColumn fx:id="coursePrice" prefWidth="280.0" text="Course Price" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="lessonPick" layoutX="81.0" layoutY="65.0" prefWidth="150.0" />
+      <Button fx:id="searchLesson" layoutX="266.0" layoutY="65.0" mnemonicParsing="false" onAction="#searchCoa" text="Search" />
+      <Button fx:id="order" layoutX="590.0" layoutY="429.0" mnemonicParsing="false" onAction="#orderCourse" text="Order" />
+      <ComboBox fx:id="preDay" layoutX="377.0" layoutY="65.0" prefWidth="150.0" />
+      <Label layoutX="81.0" layoutY="38.0" text="Please choose lesson time" />
+      <Label layoutX="377.0" layoutY="38.0" text="Please chose order date" />
+      <Label layoutX="81.0" layoutY="434.0" text="Choose the live course you want to schedule and click the &quot;Order &quot;to schedule" textFill="#190eb9" />
+   </children>
+</AnchorPane>

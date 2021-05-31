@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_TrainPlan_Controller">
+   <children>
+      <TableView fx:id="trainInfo" layoutX="37.0" layoutY="69.0" prefHeight="262.0" prefWidth="525.0">
+        <columns>
+          <TableColumn fx:id="trainCoaId" prefWidth="97.60003662109375" text="coach ID" />
+          <TableColumn fx:id="trainCourseId" prefWidth="98.39996337890625" text="course ID" />
+            <TableColumn fx:id="trainLessonDate" prefWidth="215.199951171875" text="Lesson Date" />
+            <TableColumn fx:id="trainLessonNo" minWidth="0.0" prefWidth="114.39998779296877" text="lesson No" />
+        </columns>
+      </TableView>
+      <Label layoutX="209.0" layoutY="22.0" text="Live Training  Plan">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="406.0" layoutY="51.0" text="clcik the course to watch lesson" textFill="#1c0770" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_HomePage_Controller">
+   <children>
+      <Accordion>
+        <panes>
+          <TitledPane animated="false" text="untitled 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Pane prefHeight="450.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/home.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="450.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="update_btn" alignment="CENTER_RIGHT" layoutX="706.0" layoutY="18.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#toUser_update" opacity="0.55" style="-fx-background: red;" text="MODIFY">
+               <cursor>
+                  <Cursor fx:constant="V_RESIZE" />
+               </cursor>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="course_search_btn" blendMode="HARD_LIGHT" cacheHint="SPEED" layoutX="170.0" layoutY="137.0" mnemonicParsing="false" onAction="#toUser_course" opacity="0.99" prefHeight="32.0" prefWidth="134.0" text="SEARCH MORE" textFill="#1b0e02" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+               <effect>
+                  <Blend mode="ADD" opacity="0.0" />
+               </effect>
+            </Button>
+            <Label layoutX="498.0" layoutY="22.0" prefHeight="27.0" prefWidth="179.0" text="PERSONAL PAGE" textFill="#f5f5f5">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="516.0" layoutY="110.0" prefHeight="20.0" prefWidth="85.0" text="BIRTH DAY" textFill="#f8f6f6">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="543.0" layoutY="150.0" prefHeight="17.0" prefWidth="50.0" text="EMAIL" textFill="#f5f3f3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="543.0" layoutY="190.0" prefHeight="18.0" prefWidth="58.0" text="PHONE" textFill="#f8f5f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameText" layoutX="550.0" layoutY="70.0" prefHeight="17.0" prefWidth="75.0" textFill="#f5f3f3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="birthText" layoutX="610.0" layoutY="110.0" prefHeight="17.0" prefWidth="106.0" textFill="#f8f3f3">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="sexText" layoutX="650.0" layoutY="70.0" prefHeight="20.0" prefWidth="30.0" textFill="#f5f0f0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailText" layoutX="610.0" layoutY="150.0" prefHeight="17.0" prefWidth="179.0" textFill="#f8f5f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="phoneText" layoutX="610.0" layoutY="190.0" prefHeight="17.0" prefWidth="157.0" textFill="#f5f5f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="635.0" layoutY="70.0" text="|">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="55.0" text="Recorded Course List">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="#ddd8d8" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <TableView fx:id="tableView" blendMode="HARD_LIGHT" layoutX="40.0" layoutY="179.0" prefHeight="257.0" prefWidth="393.0">
+              <columns>
+                <TableColumn fx:id="courseName" prefWidth="122.0" text="COURSE NAME" />
+                <TableColumn fx:id="type" prefWidth="146.0" text="TYPE" />
+                  <TableColumn fx:id="duration" prefWidth="124.0" text="DURATION" />
+              </columns>
+            </TableView>
+            <VBox layoutX="551.0" layoutY="273.0" prefHeight="163.0" prefWidth="225.0">
+               <children>
+                  <Button fx:id="charge_btn" blendMode="SRC_ATOP" cacheHint="ROTATE" depthTest="ENABLE" mnemonicParsing="false" onAction="#toUser_charge" prefHeight="18.0" prefWidth="225.0" text="MEMBER INFORMATION" textAlignment="CENTER" textFill="#460202" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="49.29" color="#daa6a6" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Label prefHeight="23.0" prefWidth="33.0" />
+                  <Label prefHeight="31.0" prefWidth="30.0" />
+                  <Button blendMode="SRC_ATOP" mnemonicParsing="false" onAction="#invite" prefHeight="40.0" prefWidth="225.0" text="INVITE OTHERS">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Button blendMode="HARD_LIGHT" layoutX="340.0" layoutY="137.0" mnemonicParsing="false" onAction="#deleteCourse" text="DELETE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="543.0" layoutY="225.0" text="USER ID" textFill="#f5f4f4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="IDText" layoutX="610.0" layoutY="225.0" prefHeight="20.0" prefWidth="128.0" textFill="#f8f4f4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="102.0" text="CLICK TO WATCH THE VIDEO" textFill="#fffbfa">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

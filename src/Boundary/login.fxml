@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="552.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.management.Login_Controller">
+   <children>
+      <Accordion />
+      <Pane prefHeight="564.0" prefWidth="800.0">
+         <children>
+            <ImageView fx:id="imageview" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/background.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="72.0" layoutY="196.0" prefHeight="229.0" prefWidth="254.0">
+               <children>
+                  <Button fx:id="login_button" layoutX="36.0" layoutY="147.0" mnemonicParsing="false" onAction="#login_action" prefHeight="33.0" prefWidth="72.0" text="Login" />
+                  <RadioButton fx:id="user_radioButton" layoutX="24.0" layoutY="100.0" mnemonicParsing="false" selected="true" text="member" textFill="WHITE" />
+                  <RadioButton fx:id="staff_radioButton" layoutX="104.0" layoutY="100.0" mnemonicParsing="false" text="staff" textFill="WHITE" />
+                  <RadioButton fx:id="coach_radioButton" layoutX="163.0" layoutY="100.0" mnemonicParsing="false" text="coach" textFill="WHITE" />
+                  <Label layoutX="17.0" layoutY="21.0" prefHeight="27.0" prefWidth="55.0" text="user ID" textFill="WHITE" />
+                  <Label layoutX="8.0" layoutY="66.0" prefHeight="16.0" prefWidth="64.0" text="password" textFill="WHITE" />
+                  <TextField fx:id="account_textField" layoutX="69.0" layoutY="23.0" />
+                  <PasswordField fx:id="passwordField" layoutX="69.0" layoutY="62.0" />
+                  <Button fx:id="register_button" layoutX="151.0" layoutY="147.0" mnemonicParsing="false" onAction="#toRegister" prefHeight="33.0" prefWidth="78.0" text="Register" />
+               </children>
+            </Pane>
+            <Button fx:id="forgetPass" layoutX="318.0" layoutY="261.0" mnemonicParsing="false" onAction="#forgetPass_action" text="forget password" />
+            <Label layoutX="119.0" layoutY="45.0" prefHeight="42.0" prefWidth="160.0" text="Welcome " textAlignment="RIGHT" textFill="#f5f5f5">
+               <font>
+                  <Font name="System Italic" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="555.0" layoutY="107.0" text="Keep Running">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#b9adad" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="555.0" layoutY="162.0" text="Keep Yourself">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#b9adad" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

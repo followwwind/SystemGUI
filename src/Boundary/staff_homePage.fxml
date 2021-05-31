@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.staff.staff_home_Page_Controller">
+   <children>
+      <TabPane fx:id="managerPage" layoutY="-7.0" prefHeight="541.0" prefWidth="808.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="homepage_tab" onSelectionChanged="#showHomePage" text="Home Page">
+               <content>
+                  <Pane fx:id="homePage_Pane" prefHeight="795.0" prefWidth="1014.0">
+                     <children>
+                        <Label layoutX="7.0" layoutY="-1.0" maxHeight="600.0" maxWidth="600.0" minHeight="30.0" text="Personal Information:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="65.0" prefHeight="22.0" prefWidth="56.0" text="Name" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="staffName" layoutX="70.0" layoutY="64.0" prefHeight="23.0" prefWidth="165.0" textFill="#546cbf">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="96.0" text="Phone:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="staffPhone" layoutX="63.0" layoutY="96.0" prefHeight="20.0" prefWidth="113.0" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Line endX="-99.99998474121094" endY="19.333358764648438" layoutX="264.0" layoutY="94.0" startX="-100.0" stroke="#546cbf" />
+                        <Label layoutX="175.0" layoutY="97.0" text="Sex:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="staffSex" layoutX="211.0" layoutY="98.0" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="modify_manage_info_label" layoutX="16.0" layoutY="154.0" onMousePressed="#modify_manage_info" text="Modify personal information" textFill="#546cbf" underline="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="125.0" text="Email:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="staffEmail" layoutX="64.0" layoutY="127.0" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <MenuBar layoutY="183.0" prefHeight="22.0" prefWidth="1014.0">
+                          <menus>
+                            <Menu fx:id="homePage_Menu" mnemonicParsing="false" onAction="#showUserPieChart" text="User Statistics">
+                  				<items>
+                    			<MenuItem mnemonicParsing="false" text="User Statistics" />
+                  				</items>
+                			</Menu>
+                		<Menu fx:id="memberstatistic" mnemonicParsing="false" onAction="#showmemberchart" text="Recharge Statistics">
+                  				<items>
+                    			<MenuItem mnemonicParsing="false" text="Recharge Statistics" />
+                  				</items>
+                		</Menu>
+                		<Menu fx:id="staff_manage_user_Menu" mnemonicParsing="false" onAction="#showCoachchart" text="Coach Statistics">
+                  				<items>
+                    			<MenuItem mnemonicParsing="false" text="Coach Statistics" />
+                  				</items>
+                		</Menu>
+                  		<Menu fx:id="staff_manage_coach_menu" mnemonicParsing="false" onAction="#showrecordchart" text="Recorded Courses Statistics">
+                    			<items>
+                      			<MenuItem mnemonicParsing="false" text="Recorded Courses Statistics" />
+                    			</items>
+                  				</Menu>
+              			</menus>
+            			</MenuBar>
+                        <PieChart fx:id="userpiechart" labelLineLength="40.0" layoutX="23.0" layoutY="227.0" legendSide="LEFT" prefHeight="273.0" prefWidth="413.0" />
+            			<PieChart fx:id="usersexPieChart" layoutX="420.0" layoutY="231.0" prefHeight="265.0" prefWidth="350.0" />
+            			<TableView fx:id="coachrankTable" layoutX="136.0" layoutY="239.0" prefHeight="200.0" prefWidth="391.0" visible="false">
+              				<columns>
+                			<TableColumn fx:id="coachRank" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="RANK" />
+                			<TableColumn fx:id="CoachID" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="COACH ID" />
+                  			<TableColumn fx:id="CourseNo" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="LIVE COURSE NO." />
+              				</columns>
+            			</TableView>
+            			<TableView fx:id="membertable" layoutX="136.0" layoutY="239.0" prefHeight="200.0" prefWidth="391.0" visible="false">
+              				<columns>
+               				<TableColumn fx:id="memberrank" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="RANK" />
+                			<TableColumn fx:id="memberID" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="MEMBER ID" />
+                  			<TableColumn fx:id="Money" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="TOTAL RECHARGE" />
+              			</columns>
+            			</TableView>
+            			<TableView fx:id="recordtable" layoutX="136.0" layoutY="239.0" prefHeight="200.0" prefWidth="500.0" visible="false">
+              			<columns>
+               			<TableColumn fx:id="recordrank" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="RANK" />
+                			<TableColumn fx:id="recordID" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="COURSE ID" />
+                  			<TableColumn fx:id="recordname" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="COURSE NAME" />
+                  			<TableColumn fx:id="recordnumber" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="ORDER No." />
+              			</columns>
+            			</TableView>
+                     </children>
+                  </Pane>
+               </content></Tab>
+          <Tab fx:id="recordcourses_tab" onSelectionChanged="#showRecordCoursePage" text="Recorded Courses Management">
+               <content>
+                  <Pane fx:id="RecordPage" prefHeight="519.0" prefWidth="815.0">
+                     <children>
+                        <Label fx:id="title_label" layoutX="10.0" layoutY="15.0" maxHeight="600.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" text="Recorded courses Information:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="search_btn" layoutX="622.0" layoutY="61.0" mnemonicParsing="false" onAction="#searchCourseAction" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="SEARCH" textFill="WHITE" />
+                        <TextField fx:id="searchCourse" layoutX="349.0" layoutY="61.0" prefHeight="26.0" prefWidth="131.0" />
+                        <Label layoutX="283.0" layoutY="65.0" text="Search:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="recordedTable" layoutX="14.0" layoutY="95.0" prefHeight="404.0" prefWidth="785.0">
+                          <columns>
+                            <TableColumn fx:id="courseId" prefWidth="46.24131393432617" text="ID" />
+                            <TableColumn fx:id="courseName" prefWidth="160.0" text="Name" />
+                              <TableColumn fx:id="CourseDescription" prefWidth="188.0" text="Description" />
+                              <TableColumn fx:id="CourseType" prefWidth="92.0" text="type" />
+                              <TableColumn fx:id="CourseDuration" prefWidth="63.0" text="duration" />
+                              <TableColumn fx:id="VideoURL" prefWidth="181.0" text="video url" />
+                              <TableColumn fx:id="Vip" minWidth="0.0" prefWidth="51.42498779296875" text="VIP " />
+                          </columns>
+                        </TableView>
+                        <ChoiceBox fx:id="chooseCoursetype" layoutX="549.0" layoutY="63.0" prefHeight="28.0" prefWidth="58.0" />
+                        <Label fx:id="type_label" layoutX="497.0" layoutY="67.0" prefHeight="18.0" prefWidth="43.0" text="Type">
+                           <font>
+                              <Font name="Arial" size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="addNew_btn" layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="ADD" textFill="WHITE" />
+                        <Button fx:id="delete_btn" layoutX="183.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCourse" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="DELETE" textFill="WHITE" />
+                        <Button fx:id="modify_btn" layoutX="98.0" layoutY="58.0" mnemonicParsing="false" onAction="#modifyCourse" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="MODIFY" textFill="WHITE" />
+                        <Button fx:id="search_btn2" layoutX="707.0" layoutY="61.0" mnemonicParsing="false" onAction="#refresh" prefHeight="32.0" prefWidth="73.0" style="-fx-base: #546cbf;" text="REFRESH" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </content></Tab>
+           <Tab fx:id="user_tab" onSelectionChanged="#UserManage" text="Member Management">
+               <content>
+                  <Pane fx:id="userPane" prefHeight="519.0" prefWidth="815.0">
+                     <children>
+                        <Label fx:id="title_label1" layoutX="12.0" layoutY="19.0" maxHeight="600.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" text="Member Information:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="modify_btn1" layoutX="484.0" layoutY="60.0" mnemonicParsing="false" onAction="#modifyUser" prefHeight="32.0" prefWidth="68.0" style="-fx-base: #546cbf;" text="MODIFY" textFill="WHITE" />
+                        <TableView fx:id="userTable" layoutX="61.0" layoutY="98.0" prefHeight="403.0" prefWidth="676.0">
+                           <columns>
+                              <TableColumn fx:id="userID" prefWidth="48.0" text="ID" />
+                              <TableColumn fx:id="userSex" prefWidth="49.0" text="Sex" />
+                              <TableColumn fx:id="userEmail" prefWidth="137.0" text="Email" />
+                              <TableColumn fx:id="userPhone" prefWidth="147.0" text="Phone" />
+                              <TableColumn fx:id="userBirth" prefWidth="126.0" text="Date of Birth" />
+                              <TableColumn fx:id="userName" prefWidth="167.82366943359375" text="Name" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="70.0" layoutY="64.0" text="Search:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchUser" layoutX="150.0" layoutY="62.0" prefHeight="26.0" prefWidth="131.0" />
+                        <Button fx:id="search_btn1" layoutX="352.0" layoutY="60.0" mnemonicParsing="false" onAction="#searchUserAction" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="SEARCH" textFill="WHITE" />
+                        <Label layoutX="262.0" layoutY="26.0" text="Choose the member by click the table line and Modify member's information by clicking &quot;Modify&quot;" />
+                        <Button layoutX="595.0" layoutY="59.0" mnemonicParsing="false" onAction="#refresh_Member" prefHeight="32.0" prefWidth="90.0" style="-fx-base: #546cbf;" text="REFRESH" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </content></Tab>
+           <Tab fx:id="coach_tab" onSelectionChanged="#coachManage" text="Coach Management">
+               <content>
+                  <Pane prefHeight="519.0" prefWidth="815.0">
+                     <children>
+                        <Button layoutX="98.0" layoutY="58.0" mnemonicParsing="false" onAction="#modifyCoach" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="MODIFY" textFill="WHITE" />
+                        <Button layoutX="183.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCoach" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="DELETE" textFill="WHITE" />
+                        <Button layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#addCoachAction" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="ADD" textFill="WHITE" />
+                        <TableView fx:id="coachTable" layoutX="14.0" layoutY="95.0" prefHeight="404.0" prefWidth="785.0">
+                           <columns>
+                              <TableColumn fx:id="coachID" prefWidth="113.85041809082031" text="ID" />
+                              <TableColumn fx:id="coachSex" minWidth="7.149543762207031" prefWidth="46.03916931152344" text="Sex" />
+                              <TableColumn fx:id="coachEmail" prefWidth="138.17152404785156" text="Email" />
+                              <TableColumn fx:id="coachPhone" prefWidth="174.54180908203125" text="Phone" />
+                              <TableColumn fx:id="coachBirth" prefWidth="173.78701782226562" text="Date of Birth" />
+                              <TableColumn fx:id="coachName" prefWidth="135.00006103515625" text="Name" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="283.0" layoutY="65.0" text="Search:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchCoach" layoutX="349.0" layoutY="61.0" prefHeight="26.0" prefWidth="131.0" />
+                        <Button layoutX="525.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchCoach" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="SEARCH" textFill="WHITE" />
+                        <Label fx:id="title_label2" layoutX="7.0" layoutY="3.0" maxHeight="600.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" text="Coach Information:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="640.0" layoutY="60.0" mnemonicParsing="false" onAction="#refresh_coach" prefHeight="32.0" prefWidth="75.0" style="-fx-base: #546cbf;" text="REFRESH" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </content></Tab>
+           <Tab fx:id="order_tab" onSelectionChanged="#OrderManage" text="Order Management">
+               <content>
+                  <Pane prefHeight="519.0" prefWidth="815.0">
+                     <children>
+                        <Label layoutX="240.0" layoutY="65.0" text="Search:">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchOrder" layoutX="300.0" layoutY="60.0" prefHeight="26.0" prefWidth="131.0" />
+                        <Button layoutX="567.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchOrderAction" prefHeight="32.0" prefWidth="70.0" style="-fx-base: #546cbf;" text="SEARCH" textFill="WHITE" />
+                        <Label fx:id="title_label3" layoutX="23.0" layoutY="7.0" maxHeight="600.0" maxWidth="600.0" minHeight="30.0" minWidth="600.0" prefHeight="30.0" prefWidth="600.0" text="Order Information:" textFill="#546cbf">
+                           <font>
+                              <Font name="Arial Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="orderTable" layoutX="14.0" layoutY="100.0" prefHeight="404.0" prefWidth="785.0">
+                           <columns>
+                              <TableColumn fx:id="orderId" prefWidth="48.63108730316162" text="order id" />
+                              <TableColumn fx:id="userId" prefWidth="94.28754043579102" text="User Id" />
+                              <TableColumn fx:id="coachId" prefWidth="115.87339782714844" text="Coach Id" />
+                              <TableColumn fx:id="couId" minWidth="6.569610595703125" prefWidth="76.5045166015625" text="Course Id" />
+                              <TableColumn fx:id="startTime" prefWidth="120.03985595703125" text="Date" />
+                              <TableColumn fx:id="sequence" prefWidth="132.11575317382812" text="sequence" />
+                              <TableColumn fx:id="payment" prefWidth="95.28204345703125" text="price" />
+                              <TableColumn fx:id="status" prefWidth="95.28204345703125" text="status" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

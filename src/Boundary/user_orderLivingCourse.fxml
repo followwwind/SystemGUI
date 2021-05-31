@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.member.User_OrderLivingCourse_Controller">
+   <children>
+      <Button fx:id="orderYes_btn" layoutX="120.0" layoutY="241.0" mnemonicParsing="false" onAction="#confirmOrder" prefHeight="50.0" prefWidth="112.0" text="Yes">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="orderNo_btn" layoutX="367.0" layoutY="241.0" mnemonicParsing="false" onAction="#noConfirm" prefHeight="50.0" prefWidth="112.0" text="No">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="dateInfo" layoutX="275.0" layoutY="83.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="32.0" prefHeight="50.0" prefWidth="287.0" text="You will order the living course at">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="122.0" prefHeight="24.0" prefWidth="142.0" text="It will cost :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="priceInfo" layoutX="300.0" layoutY="122.0" prefHeight="15.0" prefWidth="70.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="122.0" text="£">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="169.0" text="Are you sure">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
